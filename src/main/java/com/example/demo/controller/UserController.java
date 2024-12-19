@@ -16,7 +16,9 @@ public class UserController {
 
     @PostMapping
     public User addUser(@RequestBody User user) {
-        System.out.println("Received User: " + user); // Debug log
+        if (user.getName() == null) {
+            throw new RuntimeException("Name is null in the request body");
+        }
         return userService.saveUser(user);
     }
 
