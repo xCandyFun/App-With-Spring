@@ -14,6 +14,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private Boolean expense;
 
     @Override
     public String toString() {
@@ -34,5 +35,13 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean getExpense() {
+        return expense;
+    }
+
+    public void setExpense(Boolean expense) {
+        this.expense = expense;
     }
 }

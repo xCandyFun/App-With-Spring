@@ -12,4 +12,9 @@ public class MainController {
     public String StartPage(){
         return "StartPage";
     }
+
+    @RequestMapping("/api")
+    public String ShowDataPage(){
+        return "ShowData";
+    }
 }

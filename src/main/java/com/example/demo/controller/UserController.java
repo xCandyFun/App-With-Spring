@@ -22,8 +22,5 @@ public class UserController {
         return userService.saveUser(user);
     }
 
-    @GetMapping
-    public List<User> getAllUsers(){
-        return userService.getAllUsers();
-    }
+    
 }
