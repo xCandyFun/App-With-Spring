@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Data</title>
+</head>
+
+<body>
+    <h1>List of users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the entities list -->
+            <tr th:each="entity : ${entities}">
+                <td th:text="${entity.id}"></td> <!-- Display the entity ID -->
+                <td th:text="${entity.name}"></td> <!-- Display the entity Name -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+<style scoped>
+    /* General styling for the body */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Styling for the heading */
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Styling for the table */
+    table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        /* Makes the text size readable */
+    }
+
+    /* Styling for table headers */
+    th {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        /* Adds a border for better definition */
+    }
+
+    /* Styling for table rows */
+    td {
+        padding: 10px 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+        /* Adds a border for better definition */
+    }
+
+    /* Zebra striping for table rows */
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    /* Highlight row on hover */
+    tr:hover {
+        background-color: #e0f7e0;
+    }
+</style>
+
+</html>
