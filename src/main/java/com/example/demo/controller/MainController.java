@@ -13,8 +13,4 @@ public class MainController {
         return "StartPage";
     }
 
-    @RequestMapping("/api")
-    public String ShowDataPage(){
-        return "ShowData";
-    }
 }
